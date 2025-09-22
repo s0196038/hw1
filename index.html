@@ -1,24 +1,36 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
+
+<html lang="ru">
     <head>
-        <title> Web-инт. Задание 1. Иващук 21/2 </title>
-        <meta charset="UTF-8">
+        <title> Web-инт. Задание 2. Иващук 21/2 </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="basecss.css">
     </head>
+    
     <body>
-        <h1> Web-инт. Задание 1. Иващук 21/2 </h1>
+        <header class="highlighted">
+            <h2 id="name"> Иващук Татьяна </h2>
+            <nav>
+                <img id="photo" src="logo.jpg" alt="Логотип">   
+                <div id="menu">
+                    <a href="https://s0196038.github.io" class="ots">Главная</a>
+                    <a href="/index.html" class="ots">Информация</a>
+                </div>
+                <h2 id="name1"> Задание 2: разработка сайта на CSS </h2>
+            </nav>
+        </header>
+        
+        <div class="highlighted content">
+            <h2> Гиперссылки </h2>
         <ul>
             <li><a href="http://kubsu.ru"> Абсолютная гиперссылка на главную страницу сайта kubsu.ru </a></li>
             <li><a href="https://kubsu.ru"> Абсолютная гиперссылка на главную сайта kubsu.ru в протоколе https </a></li>
             <li><a href="https://kubsu.ru"> 
-                    <img src="kubgsu photo.jpg" 
+                    <img src="kubik.jpg" 
                          alt="Ссылка-изображение"
                          id="a1"
-                         width="400"
-                         height="300">  
+                         width="300"
+                         height="200">  
             </a></li>
             <li><a href="/index.html"> Сокращенная ссылка на внутреннюю страницу</a></li>
             <li><a href="/"> Сокращённая ссылка на главную страницу </a></li>
@@ -41,11 +53,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                           coords="100,100,100" 
                           href="https://vtour.kubsu.ru/01/index.html#/scene_0001/" 
                           alt="Тур по КубГУ">
-                   <img src="photo kubik.jpg" 
+                   <img src="avatarka.jpg" 
                          alt="Картинка с разными областями" 
                          usemap="#map"
-                         width="500" 
-                         height="350">
+                         width="795" 
+                         height="200">
                 </map>
                 </p>
             </li>
@@ -62,17 +74,72 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             </li>
             <li><a href="ftp://user:password@example/file.txt"> Ссылка на файл на сервере FTP с авторизацией </a></li>
         </ul>
-       
-        <h2> Форма </h2>
+        </div>
         
-        <form action="/"
+        <br>
+        
+        <div>
+        <table class="content">
+            <caption class="highlighted"> Расписание 21/2 </caption>
+            <thead>
+                <tr class="one">
+                    <th> Понедельник </th>
+                    <th> Вторник </th>
+                    <th> Среда </th>
+                    <th> Четверг </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="two">
+                    <td colspan="2"> ООП. Лекция. </td>
+                    <td> Диффуры. Лекция. </td>
+                    <td> Матан. Лаб. </td>
+                </tr>
+                <tr class="one">
+                    <td> WEB-интерфейс. Лекция </td>
+                    <td> Матан. Лаб. </td>
+                    <td> Комп. сети. Лекция. </td>
+                    <td> Матан. Лекция. </td>
+                </tr>
+                <tr class="two">
+                    <td> ООП. Лаб </td>
+                    <td> Англ. Лаб. </td>
+                    <td> WEB-интерфейс. Лаб. </td>
+                    <td> Дискретка. Лаб. </td>
+                </tr>
+                <tr class="one">
+                    <td rowspan="3"> Дискретка. Лекция. </td>
+                    <td> Матан. Лекция. </td>
+                    <td> Бух. учет. Лекция. </td>
+                    <td> Бух.учет. Лаб. </td>
+                </tr>
+                <tr class="two">
+                    <td> Физ-ра. </td>
+                    <td> Комп. сети. Лаб. </td>
+                    <td> Комп. сети. Лекция. </td>
+                </tr>
+                <tr class="one">
+                    <td colspan="2"> Англ. Лаб. </td>
+                    <td> Диффуры. Лекция. </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        
+        <br>
+        
+        
+        <div id="forma" class="highlighted content">
+            <form action="/"
         method="POST">
-            
+                <h2> Форма </h2>
             <label> 
                 ФИО: <br>
                 <input name="field-name-1"
                        placeholder="Введите ваше ФИО">
-            </label> <br>  
+            </label> <br>
+            
+            <br>
             
             <label>
                 Номер телефона: <br>
@@ -81,23 +148,30 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                        placeholder="Введите номер телефона">
             </label> <br>
             
+            <br>
+            
             <label>
                 Email (электронная почта): <br>
                 <input name="field-email"
                        type="email"
                        placeholder="Введите ваш email">
             </label> <br>
-
+            
+            <br>
+            
             <label>
                 Дата рождения: <br>
                 <input name="field-date"
                        value="2025-01-01"
                        type="date">
             </label> <br>
-
+            
+            <br>
+            
             <label>
                 Пол:
-                <input type="radio"
+                <input type="radio" 
+                       checked="checked"
                        name="radio-group-1"
                        value="Значение1">
                 Мужской
@@ -129,20 +203,24 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <option value="Значение11"> Scala </option>
                 </select>
             </label> <br>
-
+            
+            <br>
+            
             <label>
                 Биография <br>
                 <textarea name="field-name-3" placeholder="Напишите о себе"> </textarea>
             </label> <br>
-
-            <label>
-                <input type="checkbox"
-                       checked="checked"
-                       name="field-name-4">
-                С контрактом ознакомлен(а)
-            </label> <br>
-
+            
+            <br>
+                    
+            <br>
+            
             <input type="submit"
                    value="Сохранить">
-        </form>    </body>
+        </form></div>
+        
+        <br>
+        
+        <footer class="highlighted"><p> (с) Иващук Татьяна 2025 </p></footer>
+    </body>
 </html>
